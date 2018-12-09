@@ -176,10 +176,10 @@ def start():
     args = parser.parse_args()
     common.misc.check_args(parser, args)
     api = common.api.api(args.api_key)
-    if args.rebind:
-        rebind(api)
     if args.save_to_file:
         save_config(api, args.save_to_file)
+    if args.rebind:
+        rebind(api)
     if args.write_from_file:
         write_config(api, args.write_from_file)
 
